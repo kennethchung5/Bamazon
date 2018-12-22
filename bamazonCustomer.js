@@ -16,5 +16,19 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("Connection established");
-  connection.end();
+
+  presentItems();
+  // connection.end();
 });
+
+
+function presentItems() {
+  connection.query("SELECT item_id, product_name, price FROM products ORDER BY item_id", function(error, results) {
+    if (error) throw error;
+
+    console.log(results);
+
+
+
+  })
+}
