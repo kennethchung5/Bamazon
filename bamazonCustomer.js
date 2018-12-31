@@ -59,10 +59,10 @@ function takeOrder() {
       message: "Enter a quantity (in units) to purchase.",
       type: "input",
       validate: function(input) {
-        if (input == parseInt(input)) {
+        if (input == parseInt(input) && parseInt(input) > 0) {
           return true;
         } else {
-          return "Please enter an integer."
+          return "Please enter a positive integer."
         }
       }
     }
