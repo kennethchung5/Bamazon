@@ -31,9 +31,39 @@ VALUES
 ("football gloves", "sporting goods", 34.99, 6),
 ("umbrella", "accessories", 12.00, 4),
 ("chocolate sandwich cookies", "grocery", 1.79, 4),
-("toasted oats cereal", "grocery", 1.29, 6)
+("toasted oats cereal", "grocery", 1.29, 6),
+("metronome", "musical instruments", 23.99, 8),
+("desk lamp", "home goods", 14.99, 12),
+("bananas", "grocery", 3.99, 40)
+;
+
+ALTER TABLE products 
+ADD product_sales DECIMAL(12,2) DEFAULT 0.00;
+
+SELECT * FROM products;
+
+
+DROP TABLE departments;
+
+CREATE TABLE departments (
+	department_id INT NOT NULL AUTO_INCREMENT,
+    department_name VARCHAR(50) NOT NULL,
+    over_head_costs DECIMAL(9,2) NOT NULL,
+    primary key (department_id)
+);
+
+INSERT INTO departments (department_name, over_head_costs)
+VALUES 
+("computers", 2550.00),
+("musical instruments", 1400.00),
+("home goods", 144.99),
+("accessories", 130.00),
+("sporting goods", 350.00),
+("grocery", 90.99)
 ;
 
 
-SELECT * FROM products;
+
+SELECT * FROM departments;
+
 

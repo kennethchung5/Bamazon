@@ -68,7 +68,7 @@ function takeOrder() {
     }
   ]).then(function(answers) {
 
-    connection.query("SELECT stock_quantity, price FROM products WHERE ?", 
+    connection.query("SELECT stock_quantity, price, product_sales FROM products WHERE ?", 
                       [{item_id: answers.itemChoice}], 
                       function(error, results) {
                         if (error) throw error;
@@ -80,10 +80,20 @@ function takeOrder() {
                           // transaction goes through; calculate new stock and transaction cost first
                           var newStock = results[0].stock_quantity - answers.quantity;
                           var transactionCost = (answers.quantity * results[0].price).toFixed(2);
+
+                          var newProductSales = results[0].product_sales + parseFloat(transactionCost);
+                          // console.log("The value of newProductSales is: " + newProductSales);
                           
                           connection.query("UPDATE products SET ? WHERE ?", 
-                          [{stock_quantity: newStock}, 
-                          {item_id: answers.itemChoice}], 
+                          [
+                            {
+                              stock_quantity: newStock,
+                              product_sales: newProductSales
+                            }, 
+                            {
+                              item_id: answers.itemChoice
+                            }
+                          ], 
                           function(error) {
                             if (error) throw error;
 
