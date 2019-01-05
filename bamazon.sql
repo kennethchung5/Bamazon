@@ -40,7 +40,6 @@ VALUES
 ALTER TABLE products 
 ADD product_sales DECIMAL(12,2) DEFAULT 0.00;
 
-SELECT * FROM products;
 
 
 DROP TABLE departments;
@@ -63,7 +62,18 @@ VALUES
 ;
 
 
-
+SELECT * FROM products ORDER BY department_name, item_id;
 SELECT * FROM departments;
+
+
+SELECT department_id, departments.department_name, over_head_costs, SUM(product_sales), (SUM(product_sales) - over_head_costs) AS total_profit
+FROM departments 
+LEFT JOIN products 
+ON departments.department_name = products.department_name
+GROUP BY department_id, departments.department_name, over_head_costs
+ORDER BY department_id
+
+
+
 
 
