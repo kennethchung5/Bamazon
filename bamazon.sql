@@ -1,10 +1,8 @@
-/*
+DROP DATABASE IF EXISTS bamazon;
+
 CREATE DATABASE bamazon;
 
 use bamazon;
-*/
-
-DROP TABLE products;
 
 
 CREATE TABLE products (
@@ -42,7 +40,7 @@ ADD product_sales DECIMAL(12,2) DEFAULT 0.00;
 
 
 
-DROP TABLE departments;
+
 
 CREATE TABLE departments (
 	department_id INT NOT NULL AUTO_INCREMENT,
@@ -61,7 +59,7 @@ VALUES
 ("grocery", 90.99)
 ;
 
-
+/*
 SELECT * FROM products ORDER BY department_name, item_id;
 SELECT * FROM departments;
 
@@ -72,7 +70,7 @@ LEFT JOIN products
 ON departments.department_name = products.department_name
 GROUP BY department_id, departments.department_name, over_head_costs
 ORDER BY department_id
-
+*/
 
 
 
