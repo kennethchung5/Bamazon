@@ -2,6 +2,9 @@
 
 still in progress...
 
+Demonstration: 
+https://drive.google.com/file/d/1Aas04sHKyo1mbQ7icv2VB2X1pXLUbtPd/view?usp=sharing
+
 Description
 Bamazon is a virtual store backed by a SQL database and . This repo is a set of applications that allow users to interact with the store in 3 roles: customer, manager, or supervisor. 
 
