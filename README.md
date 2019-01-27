@@ -5,23 +5,22 @@ Bamazon is a simulated virtual store accessible through the Command Line Interfa
 
 **Setup**<br/>
 These apps are to be run in the CLI; there is no deployed Web site. NodeJS is required, and the user will have to use NPM to install additional packages. Furthermore, setup entails creating a SQL database.<br/>
-Prerequisites
-* NodeJS
-* SQL IDE (e.g. MySQL Workbench)
+
+Prerequisites: NodeJS; SQL IDE (e.g. MySQL Workbench)
 
 1. Clone the Bamazon repository to your computer.
 2. Navigate to your local copy of the repo through the CLI. Then, run<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm install<br/>
-&nbsp;&nbsp;&nbsp;This will install the three additional Node packages (dependencies) used by the apps: inquirer, mysql, and console.table.
+&nbsp;This will install the three additional Node packages (dependencies) used by the apps: inquirer, mysql, and console.table.
 3. Open the file 'bamazon.sql' in your local SQL environment and run the script. 
    This will set up the bamazon database, creating the tables and populating them with sample data (like schema.sql and seeds.sql files). 
 4. Edit the 'connection.js' file to match your SQL environment's credentials.
 
 **Using the apps**<br/> 
-There are 3 application files to run: 'bamazonCustomer.js', 'bamazonManager.js', and 'bamazonSupervisor.js'. To run an app, enter the command "node " followed by the app's filename in the CLI:
-- node bamazonCustomer.js
-- node bamazonManager.js
-- node bamazonSupervisor.js
+There are 3 application files to run: 'bamazonCustomer.js', 'bamazonManager.js', and 'bamazonSupervisor.js'. To run an app, enter the command "node " followed by the app's filename in the CLI:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonCustomer.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonManager.js
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonSupervisor.js<br/>
 Then, simply follow the prompts. Each application runs indefinitely (returning to its original menu after each course of action). To stop running an app, press CTRL+C.
 
 **Demonstration**<br/>
