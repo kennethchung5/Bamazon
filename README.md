@@ -18,9 +18,9 @@ Prerequisites: NodeJS; SQL IDE (e.g. MySQL Workbench)
 
 **Using the apps**<br/> 
 There are 3 application files to run: 'bamazonCustomer.js', 'bamazonManager.js', and 'bamazonSupervisor.js'. To run an app, enter the command "node " followed by the app's filename in the CLI:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonCustomer.js
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonManager.js
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonSupervisor.js<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonCustomer.js<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonManager.js<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;node bamazonSupervisor.js<br/>
 Then, simply follow the prompts. Each application runs indefinitely (returning to its original menu after each course of action). To stop running an app, press CTRL+C.
 
 **Demonstration**<br/>
