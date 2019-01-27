@@ -3,12 +3,11 @@
 **Description**<br/>
 Bamazon is a simulated virtual store accessible through the Command Line Interface (CLI). The user interacts with the store by running any of three Node applications, each representing a role: Customer, Manager, or Supervisor. The user responds to prompts to perform various actions, including purchasing items, adding to the inventory, and viewing profit by department. The store is backed by a SQL database, so data persist across sessions; each transaction affects the database, thus influencing the user's future experience with the apps. 
 
-**Setup**
-*Prerequisites
-  *NodeJS
-  *SQL IDE (e.g. MySQL Workbench)
+**Prerequisites**
+* NodeJS
+* SQL IDE (e.g. MySQL Workbench)
 
-*Installation steps
+**Installation steps**
 1. Clone the Bamazon repository to your computer.
 2. Navigate to your local copy of the repo through the CLI. Then, run 
         npm install
